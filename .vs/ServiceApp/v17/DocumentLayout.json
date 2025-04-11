@@ -1,0 +1,265 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\bheem.megavath\\source\\repos\\ServiceApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F850C2CC-A572-4DF2-8319-00643002CD2B}|ServiceApp\\ServiceApp.csproj|c:\\users\\bheem.megavath\\source\\repos\\serviceapp\\serviceapp\\repositories\\serviceprofessionalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F850C2CC-A572-4DF2-8319-00643002CD2B}|ServiceApp\\ServiceApp.csproj|solutionrelative:serviceapp\\repositories\\serviceprofessionalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F850C2CC-A572-4DF2-8319-00643002CD2B}|ServiceApp\\ServiceApp.csproj|c:\\users\\bheem.megavath\\source\\repos\\serviceapp\\serviceapp\\model\\serviceprofessional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F850C2CC-A572-4DF2-8319-00643002CD2B}|ServiceApp\\ServiceApp.csproj|solutionrelative:serviceapp\\model\\serviceprofessional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F850C2CC-A572-4DF2-8319-00643002CD2B}|ServiceApp\\ServiceApp.csproj|c:\\users\\bheem.megavath\\source\\repos\\serviceapp\\serviceapp\\controllers\\serviceprofessionalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F850C2CC-A572-4DF2-8319-00643002CD2B}|ServiceApp\\ServiceApp.csproj|solutionrelative:serviceapp\\controllers\\serviceprofessionalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F850C2CC-A572-4DF2-8319-00643002CD2B}|ServiceApp\\ServiceApp.csproj|c:\\users\\bheem.megavath\\source\\repos\\serviceapp\\serviceapp\\model\\servicebooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F850C2CC-A572-4DF2-8319-00643002CD2B}|ServiceApp\\ServiceApp.csproj|solutionrelative:serviceapp\\model\\servicebooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F850C2CC-A572-4DF2-8319-00643002CD2B}|ServiceApp\\ServiceApp.csproj|c:\\users\\bheem.megavath\\source\\repos\\serviceapp\\serviceapp\\model\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F850C2CC-A572-4DF2-8319-00643002CD2B}|ServiceApp\\ServiceApp.csproj|solutionrelative:serviceapp\\model\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F850C2CC-A572-4DF2-8319-00643002CD2B}|ServiceApp\\ServiceApp.csproj|c:\\users\\bheem.megavath\\source\\repos\\serviceapp\\serviceapp\\repositories\\clientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F850C2CC-A572-4DF2-8319-00643002CD2B}|ServiceApp\\ServiceApp.csproj|solutionrelative:serviceapp\\repositories\\clientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F850C2CC-A572-4DF2-8319-00643002CD2B}|ServiceApp\\ServiceApp.csproj|c:\\users\\bheem.megavath\\source\\repos\\serviceapp\\serviceapp\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F850C2CC-A572-4DF2-8319-00643002CD2B}|ServiceApp\\ServiceApp.csproj|solutionrelative:serviceapp\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F850C2CC-A572-4DF2-8319-00643002CD2B}|ServiceApp\\ServiceApp.csproj|c:\\users\\bheem.megavath\\source\\repos\\serviceapp\\serviceapp\\controllers\\authcontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F850C2CC-A572-4DF2-8319-00643002CD2B}|ServiceApp\\ServiceApp.csproj|solutionrelative:serviceapp\\controllers\\authcontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F850C2CC-A572-4DF2-8319-00643002CD2B}|ServiceApp\\ServiceApp.csproj|c:\\users\\bheem.megavath\\source\\repos\\serviceapp\\serviceapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F850C2CC-A572-4DF2-8319-00643002CD2B}|ServiceApp\\ServiceApp.csproj|solutionrelative:serviceapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 23,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServiceProfessionalRepository.cs",
+              "DocumentMoniker": "C:\\Users\\bheem.megavath\\source\\repos\\ServiceApp\\ServiceApp\\Repositories\\ServiceProfessionalRepository.cs",
+              "RelativeDocumentMoniker": "ServiceApp\\Repositories\\ServiceProfessionalRepository.cs",
+              "ToolTip": "C:\\Users\\bheem.megavath\\source\\repos\\ServiceApp\\ServiceApp\\Repositories\\ServiceProfessionalRepository.cs",
+              "RelativeToolTip": "ServiceApp\\Repositories\\ServiceProfessionalRepository.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAmwC8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T11:47:02.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ServiceProfessionalController.cs",
+              "DocumentMoniker": "C:\\Users\\bheem.megavath\\source\\repos\\ServiceApp\\ServiceApp\\Controllers\\ServiceProfessionalController.cs",
+              "RelativeDocumentMoniker": "ServiceApp\\Controllers\\ServiceProfessionalController.cs",
+              "ToolTip": "C:\\Users\\bheem.megavath\\source\\repos\\ServiceApp\\ServiceApp\\Controllers\\ServiceProfessionalController.cs",
+              "RelativeToolTip": "ServiceApp\\Controllers\\ServiceProfessionalController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T11:46:46.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\bheem.megavath\\source\\repos\\ServiceApp\\ServiceApp\\Program.cs",
+              "RelativeDocumentMoniker": "ServiceApp\\Program.cs",
+              "ToolTip": "C:\\Users\\bheem.megavath\\source\\repos\\ServiceApp\\ServiceApp\\Program.cs",
+              "RelativeToolTip": "ServiceApp\\Program.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAIAwwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T11:36:11.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthController .cs",
+              "DocumentMoniker": "C:\\Users\\bheem.megavath\\source\\repos\\ServiceApp\\ServiceApp\\Controllers\\AuthController .cs",
+              "RelativeDocumentMoniker": "ServiceApp\\Controllers\\AuthController .cs",
+              "ToolTip": "C:\\Users\\bheem.megavath\\source\\repos\\ServiceApp\\ServiceApp\\Controllers\\AuthController .cs",
+              "RelativeToolTip": "ServiceApp\\Controllers\\AuthController .cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwCwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T11:34:52.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClientRepository.cs",
+              "DocumentMoniker": "C:\\Users\\bheem.megavath\\source\\repos\\ServiceApp\\ServiceApp\\Repositories\\ClientRepository.cs",
+              "RelativeDocumentMoniker": "ServiceApp\\Repositories\\ClientRepository.cs",
+              "ToolTip": "C:\\Users\\bheem.megavath\\source\\repos\\ServiceApp\\ServiceApp\\Repositories\\ClientRepository.cs",
+              "RelativeToolTip": "ServiceApp\\Repositories\\ClientRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T11:32:49.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServiceBooking.cs",
+              "DocumentMoniker": "C:\\Users\\bheem.megavath\\source\\repos\\ServiceApp\\ServiceApp\\Model\\ServiceBooking.cs",
+              "RelativeDocumentMoniker": "ServiceApp\\Model\\ServiceBooking.cs",
+              "ToolTip": "C:\\Users\\bheem.megavath\\source\\repos\\ServiceApp\\ServiceApp\\Model\\ServiceBooking.cs",
+              "RelativeToolTip": "ServiceApp\\Model\\ServiceBooking.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T11:32:45.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ServiceProfessional.cs",
+              "DocumentMoniker": "C:\\Users\\bheem.megavath\\source\\repos\\ServiceApp\\ServiceApp\\Model\\ServiceProfessional.cs",
+              "RelativeDocumentMoniker": "ServiceApp\\Model\\ServiceProfessional.cs",
+              "ToolTip": "C:\\Users\\bheem.megavath\\source\\repos\\ServiceApp\\ServiceApp\\Model\\ServiceProfessional.cs",
+              "RelativeToolTip": "ServiceApp\\Model\\ServiceProfessional.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T11:32:41.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\bheem.megavath\\source\\repos\\ServiceApp\\ServiceApp\\Model\\Client.cs",
+              "RelativeDocumentMoniker": "ServiceApp\\Model\\Client.cs",
+              "ToolTip": "C:\\Users\\bheem.megavath\\source\\repos\\ServiceApp\\ServiceApp\\Model\\Client.cs",
+              "RelativeToolTip": "ServiceApp\\Model\\Client.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T11:32:13.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ClientController.cs",
+              "DocumentMoniker": "C:\\Users\\bheem.megavath\\source\\repos\\ServiceApp\\ServiceApp\\Controllers\\ClientController.cs",
+              "RelativeDocumentMoniker": "ServiceApp\\Controllers\\ClientController.cs",
+              "ToolTip": "C:\\Users\\bheem.megavath\\source\\repos\\ServiceApp\\ServiceApp\\Controllers\\ClientController.cs",
+              "RelativeToolTip": "ServiceApp\\Controllers\\ClientController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAApwCQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T11:26:21.687Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
