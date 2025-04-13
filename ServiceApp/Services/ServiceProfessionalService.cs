@@ -3,6 +3,7 @@ using ServiceApp.DTOs;
 using ServiceApp.Helpers;
 using ServiceApp.Model;
 using ServiceApp.Repositories;
+using System.Collections.Generic;
 
 namespace ServiceApp.Services
 {
@@ -47,7 +48,7 @@ namespace ServiceApp.Services
         {
             var professional = _mapper.Map<ServiceProfessional>(dto);
             professional.PasswordHash = PasswordHelper.HashPassword(dto.Password);
-
+            professional.Skills = string.Join(",", dto.Skills);
             await _repository.RegisterServiceProfessionalAsync(professional);
         }
 

@@ -19,7 +19,7 @@ namespace ServiceApp.Controllers
         public async Task<IActionResult> Register([FromBody] ClientRegistrationDto dto)
         {
             await _clientService.RegisterClientAsync(dto);
-            return Ok("Client registered successfully");
+            return Ok(true);
         }
 
         //[HttpPost("login")]
