@@ -54,7 +54,7 @@ namespace ServiceApp.Services
 
         public async Task<ClientDto?> LoginAsync(UserLoginDto user)
         {
-            var client = await _repository.GetByEmailAsync(user.Email);
+            var client = await _repository.GetByEmailAsync(user.UserName);
             if (client == null)
                 return null;
 
@@ -70,6 +70,11 @@ namespace ServiceApp.Services
         public async Task<Client?> GetByEmailAsync(string email)
         {
             return await _repository.GetByEmailAsync(email);
+        }
+
+        public async Task<Client?> GetByPhoneAsync(string phoneNumber)
+        {
+            return await _repository.GetByPhoneAsync(phoneNumber);
         }
     }
 }

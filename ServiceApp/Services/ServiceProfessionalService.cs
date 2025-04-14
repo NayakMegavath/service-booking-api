@@ -54,7 +54,7 @@ namespace ServiceApp.Services
 
         public async Task<ServiceProfessionalDto?> LoginAsync(UserLoginDto user)
         {
-            var loginUser = await _repository.GetByEmailAsync(user.Email);
+            var loginUser = await _repository.GetByEmailAsync(user.UserName);
             if (user == null) return null;
 
             var hashedInput = PasswordHelper.HashPassword(user.Password);
@@ -67,6 +67,11 @@ namespace ServiceApp.Services
         public async Task<ServiceProfessional?> GetByEmailAsync(string email)
         {
             return await _repository.GetByEmailAsync(email);
+        }
+
+        public async Task<ServiceProfessional?> GetByPhoneAsync(string phoneNumber)
+        {
+            return await _repository.GetByPhoneAsync(phoneNumber);
         }
     }
 }

@@ -49,5 +49,10 @@ namespace ServiceApp.Repositories
         {
             return await _context.Client.FirstOrDefaultAsync(c => c.Email == email);
         }
+
+        public async Task<Client?> GetByPhoneAsync(string phoneNumber)
+        {
+            return await _context.Client.FirstOrDefaultAsync(sp => sp.PhoneNumber == phoneNumber);
+        }
     }
 }

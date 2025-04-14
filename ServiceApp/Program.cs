@@ -22,6 +22,7 @@ builder.Services.AddSingleton<PasswordService>();
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 builder.Services.AddScoped<IServiceProfessionalService, ServiceProfessionalService>();
 builder.Services.AddScoped<IServiceProfessionalRepository, ServiceProfessionalRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 
 // Add Controllers and Swagger

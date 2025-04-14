@@ -28,7 +28,8 @@ namespace ServiceApp.Services
             {
             new Claim(JwtRegisteredClaimNames.Sub, userId),
             new Claim(JwtRegisteredClaimNames.Email, email),
-            new Claim(ClaimTypes.Role, role)
+            //new Claim(ClaimTypes.Role, role),
+            new Claim("userType", role)
         };
 
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
