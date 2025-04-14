@@ -17,7 +17,6 @@
 
     public class ServiceProfessionalRegistrationDto : ClientRegistrationDto
     {
-        public string? Skills { get; set; } = string.Empty;
-        public string ServiceType { get; set; } = string.Empty;
+        public required List<string> Skills { get; set; }
     }
 }

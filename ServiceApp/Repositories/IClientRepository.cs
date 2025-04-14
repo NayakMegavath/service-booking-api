@@ -11,5 +11,6 @@ namespace ServiceApp.Repositories
         Task DeleteAsync(int id);
         Task RegisterClientAsync(Client client);
         Task<Client?> GetByEmailAsync(string email);
+        Task<Client?> GetByPhoneAsync(string phoneNumber);
     }
 }

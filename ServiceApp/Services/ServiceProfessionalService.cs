@@ -3,6 +3,7 @@ using ServiceApp.DTOs;
 using ServiceApp.Helpers;
 using ServiceApp.Model;
 using ServiceApp.Repositories;
+using System.Collections.Generic;
 
 namespace ServiceApp.Services
 {
@@ -47,13 +48,13 @@ namespace ServiceApp.Services
         {
             var professional = _mapper.Map<ServiceProfessional>(dto);
             professional.PasswordHash = PasswordHelper.HashPassword(dto.Password);
-
+            professional.Skills = string.Join(",", dto.Skills);
             await _repository.RegisterServiceProfessionalAsync(professional);
         }
 
         public async Task<ServiceProfessionalDto?> LoginAsync(UserLoginDto user)
         {
-            var loginUser = await _repository.GetByEmailAsync(user.Email);
+            var loginUser = await _repository.GetByEmailAsync(user.UserName);
             if (user == null) return null;
 
             var hashedInput = PasswordHelper.HashPassword(user.Password);
@@ -66,6 +67,11 @@ namespace ServiceApp.Services
         public async Task<ServiceProfessional?> GetByEmailAsync(string email)
         {
             return await _repository.GetByEmailAsync(email);
+        }
+
+        public async Task<ServiceProfessional?> GetByPhoneAsync(string phoneNumber)
+        {
+            return await _repository.GetByPhoneAsync(phoneNumber);
         }
     }
 }

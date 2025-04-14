@@ -13,5 +13,6 @@ namespace ServiceApp.Services
         Task RegisterClientAsync(ClientRegistrationDto dto);
         Task<ClientDto?> LoginAsync(UserLoginDto user);
         Task<Client?> GetByEmailAsync(string email);
+        Task<Client?> GetByPhoneAsync(string email);
     }
 }
