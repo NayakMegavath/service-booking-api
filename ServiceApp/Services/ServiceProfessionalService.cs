@@ -3,7 +3,6 @@ using ServiceApp.DTOs;
 using ServiceApp.Helpers;
 using ServiceApp.Model;
 using ServiceApp.Repositories;
-using System.Collections.Generic;
 
 namespace ServiceApp.Services
 {
@@ -72,6 +71,12 @@ namespace ServiceApp.Services
         public async Task<ServiceProfessional?> GetByPhoneAsync(string phoneNumber)
         {
             return await _repository.GetByPhoneAsync(phoneNumber);
+        }
+
+        public async Task<List<ServiceProfessionalDto>> GetAllByTypeAsync(string type)
+        {
+            var serviceProfessionals = await _repository.GetAllByTypeAsync(type);
+            return _mapper.Map<List<ServiceProfessionalDto>>(serviceProfessionals);
         }
     }
 }

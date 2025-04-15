@@ -39,6 +39,13 @@ namespace ServiceApp.Controllers
             return Ok(professionals);
         }
 
+        [HttpGet("{type}/providers")]
+        public async Task<IActionResult> GetAllByType(string type)
+        {
+            var professionals = await _serviceProfessionalService.GetAllByTypeAsync(type);
+            return Ok(professionals);
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {

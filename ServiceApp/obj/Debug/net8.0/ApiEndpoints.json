@@ -149,6 +149,22 @@
   },
   {
     "ContainingType": "ServiceApp.Controllers.ServiceProfessionalController",
+    "Method": "GetAllByType",
+    "RelativePath": "api/ServiceProfessional/{type}/providers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceApp.Controllers.ServiceProfessionalController",
     "Method": "Register",
     "RelativePath": "api/ServiceProfessional/register",
     "HttpMethod": "POST",

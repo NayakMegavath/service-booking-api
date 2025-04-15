@@ -29,10 +29,23 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
 
+// Configure JWT settings
+builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
 var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<JwtSettings>();
 
+// Add CORS configuration
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+               .AllowAnyHeader()
+               .AllowAnyMethod();
+    });
+});
+
+// Add Authentication
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -54,29 +67,31 @@ builder.Services.AddAuthentication(options =>
 #pragma warning restore CS8602 // Dereference of a possibly null reference.
 });
 
+// Add Authorization
 builder.Services.AddAuthorization();
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAll",
-        builder =>
-        {
-            builder.AllowAnyOrigin()
-                   .AllowAnyMethod()
-                   .AllowAnyHeader();
-        });
-});
-
 
 var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+
+// Enable CORS - it's crucial to place this early in the pipeline
 app.UseCors("AllowAll");
-// Middleware
+// app.UseCors("AllowNgrok"); // Enable other specific CORS policies if needed
+// app.UseCors(MyAllowSpecificOrigins); // Enable other specific CORS policies if needed
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-}                                                                                                                                                                                                                                                                                       
+}
+
 app.UseHttpsRedirection();
+
+// Enable Authentication - must come before Authorization and MapControllers
 app.UseAuthentication();
 app.UseAuthorization();
+
+// Map Controllers - to route incoming requests to your controllers
 app.MapControllers();
+
 app.Run();

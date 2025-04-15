@@ -18,3 +18,8 @@
 *.cache
 *.pdb
 *.json
+*.dll
+*.exe
+/.vs
+*.pdb
+*.dll
