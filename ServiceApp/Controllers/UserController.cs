@@ -13,10 +13,13 @@ namespace ServiceApp.Controllers
     {
         // Inject your user data service or repository
         private readonly IUserService _userService;
+        private readonly IClientService _clientService;
+        private readonly IServiceProfessionalService _serviceProfessionalService;
 
-        public UserController(IUserService userService)
+        public UserController(IUserService userService, IClientService clientService)
         {
             _userService = userService;
+            _clientService = clientService;
         }
 
         [HttpGet("profile")]
@@ -38,6 +41,21 @@ namespace ServiceApp.Controllers
             }
 
             return Ok(userProfile);
+        }
+
+        [HttpGet("{id}/{type}/history")]
+        public async Task<IActionResult> GetUserBookingHistory(int id, string type)
+        {
+            if (type == "client") {
+                var bookingHistory = await _clientService.GetBookingHistoryByIdAsync(id);
+                return Ok(bookingHistory);
+            }
+            if (type == "service-provider")
+            {
+                var bookingHistory = await _serviceProfessionalService.GetBookingHistoryByIdAsync(id);
+                return Ok(bookingHistory);
+            }
+            return Ok("No Booking History.");
         }
     }
 }

@@ -14,5 +14,6 @@ namespace ServiceApp.Services
         Task<ClientDto?> LoginAsync(UserLoginDto user);
         Task<Client?> GetByEmailAsync(string email);
         Task<Client?> GetByPhoneAsync(string email);
+        Task<List<BookingHistoryDto?>> GetBookingHistoryByIdAsync(int id);
     }
 }

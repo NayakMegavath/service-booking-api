@@ -12,6 +12,7 @@ namespace ServiceApp.Mappings
             CreateMap<ServiceProfessional, ServiceProfessionalDto>().ReverseMap();
             CreateMap<ClientRegistrationDto, Client>();
             CreateMap<ServiceProfessionalRegistrationDto, ServiceProfessional>();
+            CreateMap<ServiceBooking, BookingHistoryDto>();
         }
     }
 }

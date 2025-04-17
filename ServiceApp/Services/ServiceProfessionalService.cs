@@ -78,5 +78,16 @@ namespace ServiceApp.Services
             var serviceProfessionals = await _repository.GetAllByTypeAsync(type);
             return _mapper.Map<List<ServiceProfessionalDto>>(serviceProfessionals);
         }
+
+        public async Task<List<BookingHistoryDto>?> GetBookingHistoryByIdAsync(int id)
+        {
+            var serviceProfessional = await this.GetByIdAsync(id);
+            if (serviceProfessional != null)
+            {
+                var history = await _repository.GetBookingHistoryByIdAsync(id);
+                return _mapper.Map<List<BookingHistoryDto>>(history);
+            }
+            return null;
+        }
     }
 }

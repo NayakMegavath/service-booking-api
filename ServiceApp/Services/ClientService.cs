@@ -76,5 +76,16 @@ namespace ServiceApp.Services
         {
             return await _repository.GetByPhoneAsync(phoneNumber);
         }
+
+        public async Task<List<BookingHistoryDto>?> GetBookingHistoryByIdAsync(int id)
+        {
+            var client = await this.GetByIdAsync(id);
+            if (client != null)
+            {
+                var history = await _repository.GetBookingHistoryByIdAsync(id);
+                return _mapper.Map<List<BookingHistoryDto>>(history);
+            }
+            return null;
+        }
     }
 }

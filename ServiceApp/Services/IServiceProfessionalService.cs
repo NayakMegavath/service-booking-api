@@ -15,5 +15,6 @@ namespace ServiceApp.Services
         Task<ServiceProfessional?> GetByEmailAsync(string email);
         Task<ServiceProfessional?> GetByPhoneAsync(string email);
         Task<List<ServiceProfessionalDto>> GetAllByTypeAsync(string type);
+        Task<List<BookingHistoryDto?>> GetBookingHistoryByIdAsync(int id);
     }
 }
