@@ -25,3 +25,10 @@
 *.dll
 *.vsidx
 *.dll
+/.vs
+*.json
+*.exe
+*.cache
+*.dll
+*.pdb
+*.json

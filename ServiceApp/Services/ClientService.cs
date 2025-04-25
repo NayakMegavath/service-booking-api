@@ -11,10 +11,12 @@ namespace ServiceApp.Services
     public class ClientService : IClientService
     {
         private readonly IClientRepository _repository;
+        private readonly IServiceProfessionalRepository _serviceProfessionalRepository;
         private readonly IMapper _mapper;
-        public ClientService(IClientRepository repository, IMapper mapper)
+        public ClientService(IClientRepository repository, IServiceProfessionalRepository serviceProfessionalRepository, IMapper mapper)
         {
             _repository = repository;
+            _serviceProfessionalRepository = serviceProfessionalRepository;
             _mapper = mapper;
         }
 
@@ -83,8 +85,26 @@ namespace ServiceApp.Services
             if (client != null)
             {
                 var history = await _repository.GetBookingHistoryByIdAsync(id);
-                return _mapper.Map<List<BookingHistoryDto>>(history);
+
+                var result = new List<BookingHistoryDto>();
+
+                foreach (var booking in history)
+                {
+                    var dto = _mapper.Map<BookingHistoryDto>(booking);
+
+                    // Get ServiceProfessional and map to DTO
+                    var serviceProfessional = await _serviceProfessionalRepository.GetByIdAsync(booking.ServiceProfessionalId);
+                    if (serviceProfessional != null)
+                    {
+                        dto.ServiceProfessional = _mapper.Map<ServiceProfessionalDto>(serviceProfessional);
+                    }
+
+                    result.Add(dto);
+                }
+
+                return result;
             }
+
             return null;
         }
     }

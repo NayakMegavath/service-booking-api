@@ -22,16 +22,6 @@ namespace ServiceApp.Controllers
             return Ok(true);
         }
 
-        //[HttpPost("login")]
-        //public async Task<IActionResult> Login([FromBody] UserLoginDto dto)
-        //{
-        //    var token = await _clientService.LoginAsync(dto);
-        //    if (token == null)
-        //        return Unauthorized("Invalid credentials");
-
-        //    return Ok(new { Token = token });
-        //}
-
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {

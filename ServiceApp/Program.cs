@@ -23,6 +23,8 @@ builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 builder.Services.AddScoped<IServiceProfessionalService, ServiceProfessionalService>();
 builder.Services.AddScoped<IServiceProfessionalRepository, ServiceProfessionalRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IBookingService, BookingsService>();
+builder.Services.AddScoped<IBookingsRepository, BookingRepository>();
 
 
 // Add Controllers and Swagger

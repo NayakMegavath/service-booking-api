@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using ServiceApp.DTOs;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ServiceApp.Model
 {
@@ -12,7 +13,7 @@ namespace ServiceApp.Model
         public decimal? AmountPaid { get; set; }
         public int ClientId { get; set; }
         public Client? Client { get; set; }
-        public int? ServiceProfessionalId { get; set; }
+        public int ServiceProfessionalId { get; set; }
         public ServiceProfessional? ServiceProfessional { get; set; }
     }
 }
