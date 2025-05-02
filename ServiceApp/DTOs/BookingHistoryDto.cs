@@ -13,6 +13,7 @@ namespace ServiceApp.DTOs
         public decimal? AmountPaid { get; set; }
         public int ClientId { get; set; }
         public int ServiceProfessionalId { get; set; }
+        public ClientDto? Client { get; set; }
         public ServiceProfessionalDto? ServiceProfessional { get; set; }
     }
 }
