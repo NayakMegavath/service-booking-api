@@ -43,3 +43,8 @@ ServiceApp/obj/Debug/net8.0/apphost.exe
 ServiceApp/DTOs/BookingHistoryDto.cs
 ServiceApp/bin/Debug/net8.0/ServiceApp.dll
 ServiceApp/bin/Debug/net8.0/ServiceApp.dll
+/ServiceApp/obj
+/.vs/ServiceApp
+/ServiceApp/obj
+*.json
+/ServiceApp/obj
