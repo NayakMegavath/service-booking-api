@@ -3,17 +3,18 @@ using ServiceApp.DTOs;
 using ServiceApp.Helpers;
 using ServiceApp.Model;
 using ServiceApp.Repositories;
-using System.Collections.Generic;
 
 namespace ServiceApp.Services
 {
     public class ServiceProfessionalService : IServiceProfessionalService
     {
         private readonly IServiceProfessionalRepository _repository;
+        private readonly IClientRepository _clientRepository;
         private readonly IMapper _mapper;
-        public ServiceProfessionalService(IServiceProfessionalRepository repository, IMapper mapper)
+        public ServiceProfessionalService(IServiceProfessionalRepository repository, IClientRepository clientRepository, IMapper mapper)
         {
             _repository = repository;
+            _clientRepository = clientRepository;
             _mapper = mapper;
         }
 
@@ -72,6 +73,51 @@ namespace ServiceApp.Services
         public async Task<ServiceProfessional?> GetByPhoneAsync(string phoneNumber)
         {
             return await _repository.GetByPhoneAsync(phoneNumber);
+        }
+
+        public async Task<List<ServiceProfessionalDto>> GetAllByTypeAsync(string type)
+        {
+            var serviceProfessionals = await _repository.GetAllByTypeAsync(type);
+            return _mapper.Map<List<ServiceProfessionalDto>>(serviceProfessionals);
+        }
+
+        public async Task<List<BookingHistoryDto>?> GetBookingHistoryByIdAsync(int id)
+        {
+            var client = await this.GetByIdAsync(id);
+            if (client != null)
+            {
+                var history = await _repository.GetBookingHistoryByIdAsync(id);
+
+                var result = new List<BookingHistoryDto>();
+
+                foreach (var booking in history)
+                {
+                    var dto = _mapper.Map<BookingHistoryDto>(booking);
+
+                    // Get ServiceProfessional and map to DTO
+                    var clientDetail = await _clientRepository.GetByIdAsync(booking.ClientId);
+                    if (client != null)
+                    {
+                        dto.Client = _mapper.Map<ClientDto>(clientDetail);
+                    }
+
+                    result.Add(dto);
+                }
+
+                return result;
+            }
+
+            return null;
+        }
+
+        public async Task DirectUpdateAsync(ServiceProfessional professional)
+        {
+            await _repository.UpdateAsync(professional);
+        }
+
+        public async Task<ServiceProfessional?> GetServiceProfessionalByIdAsync(int id)
+        {
+            return await _repository.GetByIdAsync(id);
         }
     }
 }

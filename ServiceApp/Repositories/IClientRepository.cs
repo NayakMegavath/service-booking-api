@@ -12,5 +12,6 @@ namespace ServiceApp.Repositories
         Task RegisterClientAsync(Client client);
         Task<Client?> GetByEmailAsync(string email);
         Task<Client?> GetByPhoneAsync(string phoneNumber);
+        Task<List<ServiceBooking?>> GetBookingHistoryByIdAsync(int id);
     }
 }

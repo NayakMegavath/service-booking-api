@@ -13,5 +13,7 @@ namespace ServiceApp.Repositories
         Task RegisterServiceProfessionalAsync(ServiceProfessional client);
         Task<ServiceProfessional?> GetByEmailAsync(string email);
         Task<ServiceProfessional?> GetByPhoneAsync(string phoneNumber);
+        Task<List<ServiceProfessional?>> GetAllByTypeAsync(string type);
+        Task<List<ServiceBooking?>> GetBookingHistoryByIdAsync(int id);
     }
 }

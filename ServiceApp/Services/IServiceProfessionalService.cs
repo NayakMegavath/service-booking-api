@@ -14,5 +14,9 @@ namespace ServiceApp.Services
         Task<ServiceProfessionalDto?> LoginAsync(UserLoginDto dto);
         Task<ServiceProfessional?> GetByEmailAsync(string email);
         Task<ServiceProfessional?> GetByPhoneAsync(string email);
+        Task<List<ServiceProfessionalDto>> GetAllByTypeAsync(string type);
+        Task<List<BookingHistoryDto?>> GetBookingHistoryByIdAsync(int id);
+        Task DirectUpdateAsync(ServiceProfessional professional);
+        Task<ServiceProfessional?> GetServiceProfessionalByIdAsync(int id);
     }
 }

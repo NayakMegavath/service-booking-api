@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Azure;
+using Microsoft.AspNetCore.Mvc;
 using ServiceApp.DTOs;
 using ServiceApp.Helpers;
 using ServiceApp.Services;
@@ -31,8 +32,8 @@ namespace ServiceApp.Controllers
             var token = string.Empty;
             if (dto.UserType == "client")
             {
-                token = await ClientLoginProcessAsync(dto);
-                return Ok(new { Token = token });
+                var response = await ClientLoginProcessAsync(dto);
+                return Ok(new { response });
             }
             if (dto.UserType == "service-provider")
             {
@@ -73,9 +74,10 @@ namespace ServiceApp.Controllers
 
         #region Private Methods
 
-        private async Task<string> ClientLoginProcessAsync(UserLoginDto dto)
+        private async Task<ClientLoginResponseDto> ClientLoginProcessAsync(UserLoginDto dto)
         {
             string identifier = dto.UserName;
+            ClientLoginResponseDto? response = null;
             var token = string.Empty;
             // Try Client login by Email
             if (UtilityHelper.IsValidEmail(identifier))
@@ -83,7 +85,24 @@ namespace ServiceApp.Controllers
                 var clientByEmail = await _clientService.GetByEmailAsync(identifier);
                 if (clientByEmail != null && clientByEmail.PasswordHash == PasswordHelper.HashPassword(dto.Password))
                 {
+                    //var clientData = await _clientService.GetClientByIdAsync(clientByEmail.Id);
                     token = await _tokenService.GenerateTokenAsync(clientByEmail.Id.ToString(), clientByEmail.Email, "Client");
+                    response = new ClientLoginResponseDto
+                    {
+                        Token = token,
+                        UserId = clientByEmail.Id.ToString(),
+                        Email = clientByEmail.Email,
+                        UserType = "Client",
+                        // Map the RegisteredAddress from your client entity to AddressDto
+                        RegisteredAddress = new AddressDto // You'll need to fetch and map this from clientByEmail
+                        {
+                            Address1 = clientByEmail?.Address1 ?? string.Empty, // Assuming Client has RegisteredAddress property
+                            Address2 = clientByEmail?.Address2 ?? string.Empty,
+                            City = clientByEmail?.City ?? string.Empty,
+                            State = clientByEmail?.State ?? string.Empty,
+                            ZipCode = clientByEmail?.Zip ?? string.Empty,
+                        }
+                    };
                 }
             }
 
@@ -94,9 +113,25 @@ namespace ServiceApp.Controllers
                 if (clientByPhone != null && clientByPhone.PasswordHash == PasswordHelper.HashPassword(dto.Password))
                 {
                     token = await _tokenService.GenerateTokenAsync(clientByPhone.Id.ToString(), clientByPhone.Email, "Client"); // Assuming Client has an Email
+                    response = new ClientLoginResponseDto
+                    {
+                        Token = token,
+                        UserId = clientByPhone.Id.ToString(),
+                        Email = clientByPhone.Email,
+                        UserType = "Client",
+                        // Map the RegisteredAddress from your client entity to AddressDto
+                        RegisteredAddress = new AddressDto // You'll need to fetch and map this from clientByEmail
+                        {
+                            Address1 = clientByPhone?.Address1 ?? string.Empty, // Assuming Client has RegisteredAddress property
+                            Address2 = clientByPhone?.Address2 ?? string.Empty,
+                            City = clientByPhone?.City ?? string.Empty,
+                            State = clientByPhone?.State ?? string.Empty,
+                            ZipCode = clientByPhone?.Zip ?? string.Empty,
+                        }
+                    };
                 }
             }
-            return token;
+            return response;
         }
         #endregion
     }

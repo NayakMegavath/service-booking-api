@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ServiceApp.Data;
+using ServiceApp.DTOs;
 using ServiceApp.Model;
 using ServiceApp.Services;
 
@@ -56,6 +57,23 @@ namespace ServiceApp.Repositories
         public async Task<ServiceProfessional?> GetByPhoneAsync(string phoneNumber)
         {
             return await _context.ServiceProfessional.FirstOrDefaultAsync(sp => sp.PhoneNumber == phoneNumber);
+        }
+
+        public async Task<List<ServiceProfessional?>> GetAllByTypeAsync(string type)
+        {
+#pragma warning disable CS8619 // Nullability of reference types in value doesn't match target type.
+            return await _context.ServiceProfessional
+                .Where(sp => sp.Skills != null &&
+                             EF.Functions.Like("," + sp.Skills + ",", "%," + type + ",%"))
+                .ToListAsync();
+#pragma warning restore CS8619 // Nullability of reference types in value doesn't match target type.
+        }
+
+        public async Task<List<ServiceBooking?>> GetBookingHistoryByIdAsync(int id)
+        {
+#pragma warning disable CS8619 // Nullability of reference types in value doesn't match target type.
+            return await _context.ServiceBooking.Where(sp => sp.ServiceProfessionalId == id).ToListAsync();
+#pragma warning restore CS8619 // Nullability of reference types in value doesn't match target type.
         }
     }
 }

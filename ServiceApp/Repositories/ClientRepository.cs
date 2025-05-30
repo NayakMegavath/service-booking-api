@@ -54,5 +54,12 @@ namespace ServiceApp.Repositories
         {
             return await _context.Client.FirstOrDefaultAsync(sp => sp.PhoneNumber == phoneNumber);
         }
+
+        public async Task<List<ServiceBooking?>> GetBookingHistoryByIdAsync(int id)
+        {
+#pragma warning disable CS8619 // Nullability of reference types in value doesn't match target type.
+            return await _context.ServiceBooking.Where(sp => sp.ClientId == id).ToListAsync();
+#pragma warning restore CS8619 // Nullability of reference types in value doesn't match target type.
+        }
     }
 }
