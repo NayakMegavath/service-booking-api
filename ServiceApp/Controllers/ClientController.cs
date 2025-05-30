@@ -36,11 +36,11 @@ namespace ServiceApp.Controllers
             return client == null ? NotFound() : Ok(client);
         }
 
-        [HttpPut]
+        [HttpPut("profile")]
         public async Task<IActionResult> Update([FromBody] ClientDto dto)
         {
             await _clientService.UpdateAsync(dto);
-            return Ok("Client updated successfully");
+            return Ok(true);
         }
 
         [HttpDelete("{id}")]

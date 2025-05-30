@@ -53,11 +53,12 @@ namespace ServiceApp.Controllers
             return professional == null ? NotFound() : Ok(professional);
         }
 
-        [HttpPut]
+
+        [HttpPut("profile")]
         public async Task<IActionResult> Update([FromBody] ServiceProfessionalDto dto)
         {
             await _serviceProfessionalService.UpdateAsync(dto);
-            return Ok("Service Professional updated successfully");
+            return Ok(true);
         }
 
         [HttpDelete("{id}")]

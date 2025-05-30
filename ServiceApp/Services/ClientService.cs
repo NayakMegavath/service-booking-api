@@ -41,8 +41,22 @@ namespace ServiceApp.Services
 
         public async Task UpdateAsync(ClientDto dto)
         {
-            var client = _mapper.Map<Client>(dto);
-            await _repository.UpdateAsync(client);
+            var existingClient = await this.GetClientByIdAsync(dto.Id);
+            if (existingClient != null)
+            {
+                existingClient.MiddleName = dto.MiddleName;
+                existingClient.Email = dto.Email;
+                existingClient.Address1 = dto.Address1;
+                existingClient.Address2 = dto.Address2;
+                existingClient.City = dto.City;
+                existingClient.Zip = dto.Zip;
+                await _repository.UpdateAsync(existingClient);
+            }
+        }
+
+        public async Task DirectUpdateAsync(Client dto)
+        {
+          await _repository.UpdateAsync(dto);
         }
 
         public async Task DeleteAsync(int id) => await _repository.DeleteAsync(id);
@@ -106,6 +120,11 @@ namespace ServiceApp.Services
             }
 
             return null;
+        }
+
+        public async Task<Client?> GetClientByIdAsync(int id)
+        {
+           return await _repository.GetByIdAsync(id);
         }
     }
 }

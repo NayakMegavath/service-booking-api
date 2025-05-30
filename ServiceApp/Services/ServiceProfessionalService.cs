@@ -109,5 +109,15 @@ namespace ServiceApp.Services
 
             return null;
         }
+
+        public async Task DirectUpdateAsync(ServiceProfessional professional)
+        {
+            await _repository.UpdateAsync(professional);
+        }
+
+        public async Task<ServiceProfessional?> GetServiceProfessionalByIdAsync(int id)
+        {
+            return await _repository.GetByIdAsync(id);
+        }
     }
 }
