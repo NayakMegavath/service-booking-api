@@ -17,10 +17,11 @@ namespace ServiceApp.Controllers
         private readonly IClientService _clientService;
         private readonly IServiceProfessionalService _serviceProfessionalService;
 
-        public UserController(IUserService userService, IClientService clientService)
+        public UserController(IUserService userService, IClientService clientService, IServiceProfessionalService serviceProfessionalService)
         {
             _userService = userService;
             _clientService = clientService;
+            _serviceProfessionalService = serviceProfessionalService;
         }
 
         [HttpGet("profile")]
@@ -72,10 +73,10 @@ namespace ServiceApp.Controllers
                 var profile = await _serviceProfessionalService.GetByIdAsync(id);
                 return Ok(profile);
             }
-            return Ok("No Booking History.");
+            return Ok("Profile Not Found.");
         }
 
-        [HttpPost("{id}/{userType}/change-password")] // POST /api/account/change-password
+        [HttpPost("{id}/{userType}/change-password")]
         public async Task<IActionResult> ChangePassword(int id, string userType,[FromBody] ChangePasswordRequestDto request)
         {
             if (!ModelState.IsValid)
